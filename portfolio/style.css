@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('assets/fonts/Inter/Inter-VariableFont_slnt\,wght.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('assets/fonts/Inter/Inter-VariableFont_slnt\,wght.ttf');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    src: url('assets/fonts/Merriweather/Merriweather-Bold.ttf');
+}
+
+body {
+    font-family: 'Inter';
+    font-weight: 400;
+}
+
+h1, h2, h3, h4 {
+font-family: 'Merriweather';
+}
