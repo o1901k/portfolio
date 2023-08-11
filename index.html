@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/portfolio/portfolio/style.css">
+    <link rel="stylesheet" href="/style.css">
     <link rel="shortcut icon" type="image/png" href="assets/svg/camera.svg">
     <title>Portfolio</title>
 </head>
@@ -29,7 +29,7 @@
                     <button class="langBtn ru">ru</button>
                 </div>
                 <div class="theme">
-                    <button class="themeItem"><img class="themeImg" src="/portfolio/portfolio/assets/svg/sun.svg"></button>
+                    <button class="themeItem"><img class="themeImg" src="/assets/svg/sun.svg"></button>
                 </div>
                 <div class="burgerMenu">
                         <div class="line line1"></div>
@@ -147,21 +147,38 @@
              </div>
             </div>
             <div class="section contacts" id="contacts">
-                <div class="contacts-container">
-                    <h2 class="contact-title" data-i18="contact-me">Contact me</h2>
-                    <form class="contacts-input"> 
-                    <input  type="email" placeholder="E-mail" class="area-contact">
-                    <input  type="tel" placeholder="Phone" class="area-contact">
-                    <textarea placeholder="Message" class="area-contact area-contact-text"></textarea>
-                    <button class="button-active" data-i18="send-message">Send message</button>
+                <div class="contactsContainer">
+                    <h2 data-i18="contact-me">Contact me</h2>
+                    <form> 
+                    <input  type="email" placeholder="E-mail" class="areaContact" required>
+                    <input  type="tel" placeholder="Phone" class="areaContact" required>
+                    <textarea placeholder="Message" class="areaContact areaContactText"></textarea>
+                    <button data-i18="send-message">Send message</button>
                     </form>
                   </div>
             </div>
         </div>
     </main>
     <footer>
-        <div class="container"></div>
+        <div class="container">
+            <div class="footerData">
+                <span>&copy;</span>
+               <span>2022</span>
+               <a href="https://github.com/o1901k">github</a> 
+             </div>
+            <div class="RSS">
+                <a href="https://rs.school/js-stage0/">Rolling Scopes School</a>
+            </div>
+            <div class="socialList">
+                <ul class="socialIcons">
+                    <li><a href="https://www.instagram.com/" class="socialLink"><img src="assets/svg/inst.svg" alt="" width="32" height="32"></a></li>
+                    <li><a href="https://www.facebook.com/" class="socialLink"><img src="assets/svg/fb.svg" alt="" width="32" height="32"></a></li>
+                    <li><a href="https://twitter.com/" class="socialLink"><img src="assets/svg/tw.svg" alt="" width="32" height="32"></a></li>
+                    <li><a href="https://www.pinterest.com/" class="socialLink"><img src="assets/svg/pinterest.svg" alt="" width="32" height="32"></a></li>
+                </ul>
+            </div>
+        </div>
     </footer>
-   <script src="/portfolio/portfolio/index.js"></script> 
+   <script src="/index.js"></script> 
 </body>
 </html>
