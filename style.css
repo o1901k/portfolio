@@ -34,8 +34,10 @@ body {
     background-color: #000000;
     color:#FFFFFF;
     width: 100%;
-    background-color: antiquewhite;
     box-sizing: border-box;
+}
+main {
+  display: contents;
 }
 h1, h2, h3, h4 {
 font-family: 'Merriweather';
@@ -120,6 +122,7 @@ border: none;
 }
 .section {
   padding: 0 20px;
+  box-sizing: border-box;
 }
 .section.hero {
   background-image: url("assets/img/hero.jpg");
@@ -296,26 +299,77 @@ video {
   line-height: 36px;
   margin: auto;
 }
-.contacts {
-  background: url("assets/img/contacts.jpg");
-  background-size: 100%;
+.section.contacts {
+  background-image: url("assets/img/contacts.jpg");
   background-position: center 0;
   background-repeat: no-repeat;
-
+  background-size: auto;
   height: 700px;
+  margin-top: 60px;
+  justify-content: flex-end;
+  display: flex;
 }
-.contacts-container {
+.contactsContainer {
   display: flex;
   flex-direction: column;
   width: 450px;
   height: 445px;
-  padding-left: 970px;
-  padding-top: 60px;
+  padding: 60px 0 0;
 }
 .contacts h2 {
   font-size: 40px;
   line-height: 80px;
   color: #bdae82;
+  margin: 0 0 40px;;
+}
+form input, textarea {
+  width: 100%;
+  height: 45px;
+  border: 2px solid #bdae82;
+  background: rgba(0, 0, 0, 0.5);
+  font-size: 20px;
+  box-sizing: border-box;
+  margin: 0 0 26px;
+  color: #FFFFFF;
+}
+textarea {
+  height: 95px;
+  resize: none;
+}
+form input::placeholder, textarea::placeholder {
+  color: #bdae82;
+  font-size: 20px;
+  line-height: 45px;
+  padding-left: 17px;
+}
+footer .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 20px;
+  line-height: 50px;
+  min-height: 150px;
+}
+.footerData {
+  display: flex;
+  gap: 20px;
+}
+.socialIcons {
+  display: flex;
+  list-style: none; 
+  gap: 15px;
+  text-decoration: none;
+  line-height: normal;
+  align-content: center;
+  }
+  .socialIcons a {
+    line-height: 0;
+  }
+  .socialLink:hover {
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+contrast(87%);
 }
 @media (max-width: 768px) {
   .navMenu {
@@ -396,8 +450,26 @@ video {
     width: 75px;
     height: 75px;
   }
+  .section.contacts {
+  height: 600px;
+  justify-content: center;
+  align-content: center;
+  background-position: left;
+  }
+  .contacts h2 {
+    font-size: 32px;
+    line-height: 64px;
+  }
+  .contactsContainer {
+    text-align: center;
+  }
+  footer .container {
+    flex-direction: column;
+  }
+  .socialIcons {
+    padding: 0;
+  }
 }
-
 @media (max-width: 320px) {
   .headerContent{
     gap: 15px;
@@ -417,8 +489,10 @@ video {
   }
   .section.hero {
     background-size: 100%;
-  } 
-  
+  }
+  .section.contacts {
+    background-size: 100%;
+  }
 }
 @media (max-width:660px) {
   .skills-items{
