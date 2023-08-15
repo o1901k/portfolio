@@ -302,6 +302,10 @@ background: #FFFFFF;
   margin: 60px auto 0;
   max-width: 1440px;
 }
+.portfolioImgs img {
+  width: 450px; 
+  height: 560px;
+}
 .portfolioImgs img:hover {
   transform: scale(1.2);
   transition-duration: 0.6s;
@@ -335,7 +339,7 @@ video {
  }
  
   /* Videoplayer   */
- .videoPlayer:hover .controls {
+ .videoPlayer .controls {
   display: flex;            
   position:absolute;
   top:93%;
@@ -356,6 +360,7 @@ video {
    border: 2px dotted #FFFFFF;
    width: 35px;
    height: 25px;
+   margin: auto 0;
 }
  .buttonFullscren:hover {
    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)contrast(87%);  
@@ -365,38 +370,46 @@ video {
    background-color: #000000;
    position: absolute;
    display:none;
-   width: 97%;
-   padding: 0;
+   width: 100%;
    max-height: 50px;
    bottom: 0;
    justify-content: space-around;
-   align-content: center;
    padding:0;
-   transition:all .3s; 
+   transition:all .3s;
+   flex-wrap: wrap; 
 }
-
  .controlsMain {
-   display: flex;
+  display: flex;
+  align-items: center;
+  width: 20%;
+  justify-content: center;
+  margin: 0;
 }
  .volumeBtn {
+  display: flex;
    margin: 0;
    width: 40px;
    height: 40px;
    align-items: center;
-   padding-top: 5%;
 }
  .volumeBtn:hover {
   filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);    
 }
  .progress {
-  width: 75%;
-  padding-top: 16px;
+  width: 70%;
+  text-align: center;
+  display: flex;
+  align-items: center;
 }
 .volume {
   display: flex;
   gap: 5px;
   align-items: center;
-  width: 295px;
+  justify-content: space-around;
+  width: 100%;
+}
+.volumeSlider {
+  width: 100%;
 }
 .time {
  position: absolute;
@@ -427,7 +440,7 @@ padding-bottom: 10px;
  background: linear-gradient(to right,  #bdae82 0%, #bdae82 50%, #f2f3f4 40% , #f2f3f4 100%);
  border: solid 2px #f2f3f4;
  height: 7px;
- width: 220px;
+ width: 90%;
  outline: none;
  -webkit-appearance: none;
  margin: 0;
@@ -440,7 +453,7 @@ padding-bottom: 10px;
  cursor: ew-resize;
  background: #FFFFFF;
 }
-.volumeBtn #volume-off, .volume-btn #volume-high {
+.volumeBtn #volume-off, .volumeBtn #volume-high {
  opacity: 0;
 }
 .volumeBtn.loud #volume-high{
@@ -449,18 +462,8 @@ padding-bottom: 10px;
 .volumeBtn.muted #volume-off {
  opacity: 1;
 }
-.volumeBtn.muted #volume-high, .volume-btn.muted #volume-low {
+.volumeBtn.muted #volume-high, .volumeBtn.muted #volume-low {
  opacity: 0;
-}
-.controlsRight {
- margin: 0;
- width: 30px;
- height: 30px;
-}
-.controlsMain {
- align-items: center;
- width: 350px;
- justify-content: center;
 }
 .playBtn {
  width: 30px;
@@ -697,6 +700,9 @@ contrast(87%);
     font-size: 32px;
     line-height: auto;
   }
+  .skillsItems {
+    justify-content: center;
+  }
   .portfolio-buttons {
     width: 90%;
   }
@@ -767,5 +773,11 @@ background-size: 100%;
   }
   .portfolio-buttons button {
     width: 180px;
+  }
+}
+@media (max-width: 451px) {
+  .portfolioImgs img {
+    max-width: 280px; 
+    max-height: 350px; 
   }
 }
