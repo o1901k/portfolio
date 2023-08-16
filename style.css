@@ -339,7 +339,7 @@ video {
  }
  
   /* Videoplayer   */
- .videoPlayer .controls {
+ .videoPlayer:hover .controls {
   display: flex;            
   position:absolute;
   top:93%;
@@ -780,4 +780,24 @@ background-size: 100%;
     max-width: 280px; 
     max-height: 350px; 
   }
+.progressFilled {
+  width: 80%;
+  margin-left: 8%;
+}
+.playBtn {
+  width: 20px;
+  height: 20px;
+  margin-right: 98%;
+ margin-top: 2%;
+}
+.buttonFullscren {
+  width: 25px;
+  height: 20px;
+}
+.progress {
+  width: 55%;
+}
+.controlsMain {
+  width: 35%;
+}
 }
